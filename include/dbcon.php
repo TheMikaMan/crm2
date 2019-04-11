@@ -2,7 +2,7 @@
     $dbhost = "localhost";
     $dbuser = "root";
     $dbpass = "";
-    $dbname = "newblog";
+    $dbname = "db_crm";
 
     $dbcon = mysqli_connect($dbhost, $dbuser, $dbpass);
 
