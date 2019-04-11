@@ -13,15 +13,15 @@
                 <div id="newaan"><h1>Nieuw bericht</h1></div>
             <label>Titel</label>
             <br>
-            <input type="text" id="titlebalk" class="fromtext" name="title" required/>
+            <input type="text" id="" class="fromtext" name="title" required/>
             <br>
 
             <label>Bericht</label>
-            <textarea id="textblok" class="fromtext" row="4" cols="50" name="description" required></textarea>
+            <textarea id="" class="formtext" row="4" cols="50" name="description" required></textarea>
             <br>
 
             <label>Uitgelichte foto</label><br>
-            <input type="file" id="foto" name="foto">
+            <input type="text" id="foto" name="foto">
             <br>
             <br>
             <input type="submit" class="postknop" name="submit" value="Publiceren"/>
@@ -33,7 +33,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])) {
-	header("location: login.php");
+	header("location: index.php");
 	exit();
 	}
 include("include/adminheader.php");

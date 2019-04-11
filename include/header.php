@@ -1,6 +1,5 @@
 <?php  if(isset($_SESSION['username'])) {
 echo "<div id='header1'>
-    <img id='headerlogo' src='images/mc.png'>
     <nav>
         <ul>
             <li><a href='index.php'>Home</a></li>
@@ -12,7 +11,6 @@ echo "<div id='header1'>
 }else{
 
 echo "<div id='header1'>
-        <img id='headerlogo' src='images/mc.png'>
         <nav>
             <ul>
                 <li><a href='index.php'>Home</a></li>

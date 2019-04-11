@@ -36,7 +36,7 @@ if(!isset($_SESSION['username'])) {
 <h5 class="w3-center">Posts</h5>
 
 <?php
-$sql = "SELECT COUNT(*) FROM posts";
+$sql = "SELECT COUNT(*) FROM klant";
 $result = mysqli_query($dbcon, $sql);
 $r = mysqli_fetch_row($result);
 $numrows = $r[0];
@@ -54,30 +54,39 @@ if(isset($_GET['page']) && is_numeric($_GET['page'])) {
 			}
 			$offset = ($page - 1) * $rowsperpage;
 
-$sql = "SELECT * FROM posts ORDER BY id DESC LIMIT $offset, $rowsperpage";
+$sql = "SELECT * FROM klant ORDER BY id DESC LIMIT $offset, $rowsperpage";
 $result = mysqli_query($dbcon, $sql);
 
 if(mysqli_num_rows($result) < 1) {
-	echo "No post found";
+    echo "No post found";
 	}
-	echo "<table class='adminpage'>";
-echo "<th>ID</th>";
-echo "<th>Title</th>";
+
+echo "<th>Klant id</th>";
+echo "<th></th>";
 echo "<th>Date</th>";
 echo "<th>Views</th>";
 echo "<th>Action</th>";
 echo "</tr>";
 	while ($row = mysqli_fetch_assoc($result)) {
 		$id = $row['id'];
-		$title = $row['title'];
-        $by = $row['posted_by'];
-        $time = $row['date'];
-        $hits = $row['hits'];
+        $naam = $row['naam'];
+        $tvoeg = $row['tvoeg'];
+        $achtnaam = $row ['achtnaam'];
+        $gesla = $row ['gesla'];
+        $telnum = $row ['telnum'];
+        $email = $row ['email'];
+        $straat = $row ['straat'];
+        $huisnum = $row ['huisnum'];
+        $post = $row ['post'];
+        $woon = $row ['woon'];
+        $land = $row ['land'];
+        $date = $row ['aanmaakdatum'];
+        $id = $_POST['id'];
       ?>
 
 <tr>
 	<td><?php echo $id;?></td>
-<td><a href="view.php?id=<?php echo $id;?>"><?php echo substr($title, 0, 50) ;?></a></td>
+<td><a href="view.php?id=<?php echo $id;?>"><?php echo substr($title) ;?></a></td>
 <td><?php echo $time;?></td>
 <td><?php echo $hits;?></td>
 <td><a href="edit.php?id=<?php echo $id;?>">Edit</a> | <a href="del.php?id=<?php echo $id;?>" onclick="return confirm('Are you sure you want to delete this post?')">Delete</a></td>
