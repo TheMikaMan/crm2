@@ -265,8 +265,21 @@ textarea{
     left: 205px;
 }
 
+#menulogo{
+    position: absolute;
+    width: 270px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    background-color: #373e49;
+}
 
-
+#logoedu{
+    position: absolute;
+    height: 48px;
+    width: 200px;
+    left: 10px;
+}
 
 
 

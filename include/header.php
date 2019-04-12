@@ -1,5 +1,6 @@
 <?php  if(isset($_SESSION['username'])) {
-echo "<div id='header1'>
+echo" <div id='menulogo'><img id='logoedu' src='images/edulogo.png'></div>
+ <div id='header1'>
     <nav>
         <ul>
             <li><a href='index.php'>Home</a></li>
