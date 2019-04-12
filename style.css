@@ -239,8 +239,31 @@ textarea{
     position: absolute;
     left: 550px;
 }
+.name{
+    padding: 0px;
+    position: relative;
+    left: 45px;
+}
 
+.achtnaam{
+    position: relative;
+    left: 130px;
+}
 
+.date{
+    position: relative;
+    left: 180px;
+}
+
+.editadmin{
+    position: relative;
+    left: 200px;;
+}
+
+.deleteadmin{
+    position: relative;
+    left: 205px;
+}
 
 
 
